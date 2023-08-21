@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+<style>
+.boks {
+height: 50px;
+width: 50px;
+border: solid black;
+background-color: aqua;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 5px;
+}
+.flex-container {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#Tekstdiv {
+border: solid black;
+width: 300px;
+height: 100px;
+margin-left: 638px;
+margin-top: 50px;
+margin-bottom: 20px;
+text-align: center;
+font-size: x-large;
+font-family: sans-serif;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div id="Tekstdiv"></div>
+
+<div class="flex-container">
+<div class="boks 1" onclick="visInnhold(this,'knapp  1')">Knapp 1</div>
+<div class="boks 2" onclick="visInnhold(this, 'knapp 2')">Knapp 2</div>
+<div class="boks 3" onclick="visInnhold(this, 'knapp 3')">Knapp 3</div>
+<div class="boks 4" onclick="visInnhold(this, 'knapp 4')">Knapp 4</div>
+</div>
+
+
+<script>
+let Tekstdiv = document.getElementById('Tekstdiv');
+
+function visInnhold(element, tekst){                     //element er knyttet til onclicket. Men knapp 1 osv er tekst så har 
+Tekstdiv.textContent = 'Du har klikket på ' + tekst;     // lagt til en variabel for det. 
+console.log('Du har klikket på ' + tekst);
+}
+
+
+
+</script>
+</body>
+</html>
